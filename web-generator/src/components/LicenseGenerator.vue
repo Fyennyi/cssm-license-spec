@@ -165,14 +165,28 @@ export default {
         this.error = 'License template not loaded';
         return;
       }
-      let license = template
+      
+      let header = `CSSM Unlimited License v${this.input.version}
+Copyright (c) ${this.input.year} ${this.input.author || '[AUTHOR]'}
+`;
+      
+      if (this.input.project) {
+        header += `Project: ${this.input.project}\n`;
+      }
+      
+      let body = template
         .replace(/\[YEAR\]/g, this.input.year)
         .replace(/\[AUTHOR NAME\]/g, this.input.author || '[AUTHOR NAME]')
         .replace(/\[Copyright Holder\]/g, this.input.author || '[Copyright Holder]')
         .replace(/\[AUTHOR\]/g, this.input.author || '[AUTHOR]')
-        .replace(/\[NAME\]/g, this.input.author || '[NAME]')
-        .replace(/\[PROJECT\]/g, this.input.project ? `Project: ${this.input.project}` : '');
-      this.licenseText = license.trim();
+        .replace(/\[NAME\]/g, this.input.author || '[NAME]');
+      
+      const headerEndIndex = body.indexOf('\n\n');
+      if (headerEndIndex !== -1) {
+        body = body.slice(headerEndIndex + 2);
+      }
+      
+      this.licenseText = (header + body).trim();
     },
     copyToClipboard() {
       navigator.clipboard.writeText(this.licenseText).then(() => {

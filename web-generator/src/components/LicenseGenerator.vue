@@ -54,11 +54,6 @@
             <input v-model="input.author" type="text" placeholder="Your Name or Organization" required class="w-full px-4 py-3 bg-slate-900/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
           </div>
 
-          <div>
-            <label class="block text-sm font-medium text-slate-300 mb-2">Project Name <span class="text-slate-500 font-normal">(optional)</span></label>
-            <input v-model="input.project" type="text" placeholder="My Project" class="w-full px-4 py-3 bg-slate-900/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
-          </div>
-
           <button type="submit" class="w-full py-3 px-6 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-slate-800">
             Generate License
           </button>
@@ -125,8 +120,7 @@ export default {
       input: {
         version: '2.0',
         year: new Date().getFullYear(),
-        author: '',
-        project: ''
+        author: ''
       },
       licenseText: '',
       licenseTemplates: {
@@ -166,30 +160,14 @@ export default {
         return;
       }
       
-      let updatedMatch = template.match(/Updated (.+)/);
-      let updatedLine = updatedMatch ? `Updated ${updatedMatch[1]}\n` : '';
-      
-      let header = `CSSM Unlimited License v${this.input.version}
-Copyright (c) ${this.input.year} ${this.input.author || '[AUTHOR NAME]'}
-${updatedLine}`;
-      
-      if (this.input.project) {
-        header += `Project: ${this.input.project}\n`;
-      }
-      
-      let body = template
+      let license = template
         .replace(/\[YEAR\]/g, this.input.year)
         .replace(/\[AUTHOR NAME\]/g, this.input.author || '[AUTHOR NAME]')
         .replace(/\[Copyright Holder\]/g, this.input.author || '[Copyright Holder]')
         .replace(/\[AUTHOR\]/g, this.input.author || '[AUTHOR]')
         .replace(/\[NAME\]/g, this.input.author || '[NAME]');
       
-      const headerEndIndex = body.search(/\n\n/);
-      if (headerEndIndex !== -1) {
-        body = body.slice(headerEndIndex + 2);
-      }
-      
-      this.licenseText = (header + body).trim();
+      this.licenseText = license.trim();
     },
     copyToClipboard() {
       navigator.clipboard.writeText(this.licenseText).then(() => {

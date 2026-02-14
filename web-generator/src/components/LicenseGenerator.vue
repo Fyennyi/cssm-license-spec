@@ -166,9 +166,12 @@ export default {
         return;
       }
       
+      let updatedMatch = template.match(/Updated (.+)/);
+      let updatedLine = updatedMatch ? `Updated ${updatedMatch[1]}\n` : '';
+      
       let header = `CSSM Unlimited License v${this.input.version}
-Copyright (c) ${this.input.year} ${this.input.author || '[AUTHOR]'}
-`;
+Copyright (c) ${this.input.year} ${this.input.author || '[AUTHOR NAME]'}
+${updatedLine}`;
       
       if (this.input.project) {
         header += `Project: ${this.input.project}\n`;
@@ -181,7 +184,7 @@ Copyright (c) ${this.input.year} ${this.input.author || '[AUTHOR]'}
         .replace(/\[AUTHOR\]/g, this.input.author || '[AUTHOR]')
         .replace(/\[NAME\]/g, this.input.author || '[NAME]');
       
-      const headerEndIndex = body.indexOf('\n\n');
+      const headerEndIndex = body.search(/\n\n/);
       if (headerEndIndex !== -1) {
         body = body.slice(headerEndIndex + 2);
       }

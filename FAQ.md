@@ -12,4 +12,4 @@ A: Yes, as of v2.0. All modifications must be licensed under CSSM-ULv2.
 **Q: Can I modify the license itself?**  
 A: No, but you may propose amendments via this repository.
 
-For more answers, see [ADOPTION.md](./ADOPTION.md) or [open a question on GitHub Issues](https://github.com/Fyennyi/cssm-unlimited-license/issues).
+For more answers, see [ADOPTION.md](./ADOPTION.md) or [open a question on GitHub Issues](https://github.com/Fyennyi/cssm-license-spec/issues).

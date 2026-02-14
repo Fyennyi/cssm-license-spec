@@ -1,5 +1,5 @@
 CSSM Unlimited License v1.0
-Copyright (c) [Year] [Copyright Holder]
+Copyright (c) [YEAR] [AUTHOR NAME]
 Updated December 15, 2019
 
 Software License Agreement

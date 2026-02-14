@@ -1,0 +1,6 @@
+/**
+ * Project Name
+ * Copyright (c) 2026 [Your Name]
+ * Licensed under CSSM Unlimited License v2.0
+ * Full license text: https://github.com/Fyennyi/cssm-unlimited-license/blob/main/LICENSE-2.0.txt
+ */

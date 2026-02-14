@@ -2,7 +2,7 @@
   "name": "fyennyi/my-cool-project",
   "type": "library",
   "description": "My project licensed under CSSM Unlimited License",
-  "license": "custom",
+  "license": "LicenseRef-CSSM-Unlimited-2.0",
   "authors": [
     {
       "name": "Serhii Cherneha",

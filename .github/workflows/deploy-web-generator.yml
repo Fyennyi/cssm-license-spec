@@ -10,7 +10,6 @@ on:
 
 jobs:
   build:
-    name: Build web-generator
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -19,21 +18,18 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: npm install
+      - run: npm install
         working-directory: web-generator
 
-      - name: Build static site
-        run: npm run build
+      - run: npm run build
         working-directory: web-generator
 
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: web-generator/dist
+          path: web-generator/dist/.
 
   deploy:
-    name: Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -41,7 +37,6 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

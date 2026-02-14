@@ -1,0 +1,122 @@
+CSSM Unlimited License v1.0
+Copyright (c) [Year] [Copyright Holder]
+Updated December 15, 2019
+
+Software License Agreement
+
+Introduction
+
+This license ("License") governs the use, modification, and distribution 
+of software provided by the copyright holder ("Licensor"). By using this 
+software, you ("User" or "Licensee") agree to the terms of this License. 
+If you do not agree to the terms of this License, you are not permitted 
+to use, modify, or distribute the Software.
+
+The license is provided free of charge, and you have the right to use it 
+according to the specified terms. The Licensor reserves the right to make 
+changes to this License at any time, and these changes will take effect 
+upon their publication. Your continued use of the Software after changes 
+are made will be considered acceptance of the new License terms.
+
+This License is a legally binding agreement between the User and the 
+Licensor. All terms used in this License have the meanings defined in 
+this document unless otherwise specified.
+
+1. Product Information and User Experience
+
+We strive to provide vibrant colors to your time using this product, 
+therefore we have created this notice. Please read the text below.
+
+Attention! If you notice a bug of any kind, you may notify the copyright 
+holder at the contact address provided in the documentation. We thank you 
+for using this product and bringing popularity. We wish you success and 
+new achievements!
+
+1.1. The modification was created by the development team and ported by 
+programmers from the beginning. Various informal projects have been created 
+that are necessary for better user experience. To do this, projects were 
+taken from other existing sources (taking the bases of projects) and 
+created from scratch.
+
+1.2. Do not copy any photos, materials, or other copyrighted content. If 
+you have any questions, you can contact the copyright holder at the address 
+provided in the documentation.
+
+1.3. (For game applications only) Use of this product may result in loss 
+of data, game worlds, creations, and other similar content.
+
+1.5. To preserve data, you need to create a backup copy; otherwise, the 
+copyright holder is not responsible for any damage caused during use of 
+modifications (optional but recommended).
+
+2. Product Modifications
+
+Any modification to the product may result in loss of product quality. 
+Users modify the software at their own risk and the copyright holder bears 
+no responsibility for third-party modifications.
+
+3. Documentation and Data Protection
+
+Paper documentation that is transferred to you does not pose any threat to 
+the confidentiality of your data. Employees and partners are ready to 
+protect your data and will not intentionally use it for their own benefit. 
+If you notice loss of documentation data or find it in an unintended 
+location, contact local law enforcement agencies and contact the 
+organization at the address provided in the documentation. Response time 
+depends on the postal server in your country or city.
+
+Document copying technologies from partner companies may be used, which 
+have been on the market for several years serving various needs.
+
+4. User Feedback and Ratings
+
+Users are encouraged to rate the quality and capabilities of product 
+production and help increase visibility and ratings (this is optional).
+
+5. Beta Testing and Internal Access
+
+Employees of the development team have the right to beta test products but 
+under no circumstances may copy any fragments from modifications for 
+personal gain or similar purposes. Unauthorized distribution of beta 
+content is strictly prohibited.
+
+6. Copyright Holder Obligations
+
+The copyright holder is obligated to:
+
+6.1. Maintain a file named "update" with extension .txt or .html that 
+records the list of updates for all applications and modifications.
+
+6.2. Include text in text files with software (only if it does not conflict 
+with other lines of code) that certifies copyright in the form: "Copyright (c) [Year] [Name]" or equivalent social media tag or identifier as 
+specified.
+
+6.3. Provide timely quality services and fix errors and bugs in the 
+software to the best of ability.
+
+7. User Obligations and Responsibilities
+
+Users are obligated to:
+
+7.1. By downloading this software to their device, users primarily give 
+consent to responsibility for any damage caused to their device. Users 
+accept all risks associated with installation and use.
+
+7.2. (For game applications only) Make a backup copy of game data (for 
+example: worlds, behavior packs, or resources) before installing beta 
+versions of any modification, as this may damage game data or even the 
+device (this is optional but strongly recommended).
+
+7.3. Do not use software files for personal gain (changing licensed content 
+and files from archives of any application or modification), in other words, 
+installing links to "money boxes" or rewriting code and names and passing 
+off files as your own. Unauthorized redistribution with modified 
+attributions is prohibited.
+
+7.4. When purchasing paid or unofficial software on the internet or in 
+reality, try to read all information about the person or entity, whether 
+legal or natural (reviews, location, office, license, copyright and other 
+rights provided by the legislation of your country or other locality, and 
+information about the product), so that in case of disappointment or 
+non-compliance, representatives can provide you with monetary compensation. 
+In most cases, law enforcement involvement may be necessary.

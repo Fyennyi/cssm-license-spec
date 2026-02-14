@@ -1,0 +1,15 @@
+{
+  "name": "fyennyi/my-cool-project",
+  "type": "library",
+  "description": "My project licensed under CSSM Unlimited License",
+  "license": "custom",
+  "authors": [
+    {
+      "name": "Serhii Cherneha",
+      "email": "your@email.com"
+    }
+  ],
+  "extra": {
+    "license-url": "https://github.com/Fyennyi/cssm-unlimited-license/blob/main/LICENSE-2.0.txt"
+  }
+}

@@ -12,9 +12,6 @@ jobs:
   build:
     name: Build web-generator
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: web-generator
     steps:
       - uses: actions/checkout@v4
 
@@ -24,9 +21,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: web-generator
 
       - name: Build static site
         run: npm run build
+        working-directory: web-generator
 
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
@@ -34,11 +33,12 @@ jobs:
           path: web-generator/dist
 
   deploy:
+    name: Deploy to GitHub Pages
     needs: build
+    runs-on: ubuntu-latest
     permissions:
       pages: write
       id-token: write
-    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

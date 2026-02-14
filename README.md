@@ -1,4 +1,4 @@
-# CSSM Unlimited License Ecosystem
+# CSSM Unlimited License Specification
 
 This repository contains the official texts, specification, adoption guidelines, and templates for the CSSM Unlimited License family.
 

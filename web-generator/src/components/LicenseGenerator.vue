@@ -12,7 +12,29 @@
       </div>
 
       <div class="bg-slate-800/50 rounded-2xl border border-slate-700/50 p-8 backdrop-blur-sm">
-        <form @submit.prevent="generateLicense" class="space-y-6">
+        <div v-if="loading" class="flex items-center justify-center py-12">
+          <div class="flex items-center gap-3 text-slate-400">
+            <svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <span>Loading license templates...</span>
+          </div>
+        </div>
+
+        <div v-else-if="error" class="flex flex-col items-center justify-center py-12 text-center">
+          <div class="flex items-center gap-2 text-red-400 mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>{{ error }}</span>
+          </div>
+          <button @click="fetchLicenseTemplates" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white text-sm rounded-lg transition-colors">
+            Try Again
+          </button>
+        </div>
+
+        <form v-else @submit.prevent="generateLicense" class="space-y-6">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label class="block text-sm font-medium text-slate-300 mb-2">Version</label>
@@ -92,22 +114,8 @@
 
 <script>
 const LICENSE_TEMPLATES = {
-  "2.0": `CSSM Unlimited License v2.0
-Copyright (c) [YEAR] [AUTHOR]
-Updated November 9, 2024
-
-[PROJECT]
-
-[Insert full legal text of v2.0, replacing [YEAR], [AUTHOR], [PROJECT]]
-`,
-  "1.0": `CSSM Unlimited License v1.0
-Copyright (c) [YEAR] [AUTHOR]
-Updated December 15, 2019
-
-[PROJECT]
-
-[Insert full legal text of v1.0, replacing [YEAR], [AUTHOR], [PROJECT]]
-`
+  "2.0": null,
+  "1.0": null
 };
 
 export default {
@@ -120,15 +128,49 @@ export default {
         author: '',
         project: ''
       },
-      licenseText: ''
+      licenseText: '',
+      licenseTemplates: {
+        '2.0': '',
+        '1.0': ''
+      },
+      loading: true,
+      error: null
     };
   },
+  async mounted() {
+    await this.fetchLicenseTemplates();
+  },
   methods: {
+    async fetchLicenseTemplates() {
+      this.loading = true;
+      this.error = null;
+      try {
+        const [v2, v1] = await Promise.all([
+          fetch('https://raw.githubusercontent.com/Fyennyi/cssm-license-spec/main/LICENSE-2.0.txt'),
+          fetch('https://raw.githubusercontent.com/Fyennyi/cssm-license-spec/main/LICENSE-1.0.txt')
+        ]);
+        if (!v2.ok || !v1.ok) throw new Error('Failed to fetch license templates');
+        this.licenseTemplates['2.0'] = await v2.text();
+        this.licenseTemplates['1.0'] = await v1.text();
+      } catch (e) {
+        this.error = 'Failed to load license templates. Please try again.';
+        console.error(e);
+      } finally {
+        this.loading = false;
+      }
+    },
     generateLicense() {
-      let template = LICENSE_TEMPLATES[this.input.version];
+      let template = this.licenseTemplates[this.input.version];
+      if (!template) {
+        this.error = 'License template not loaded';
+        return;
+      }
       let license = template
         .replace(/\[YEAR\]/g, this.input.year)
+        .replace(/\[AUTHOR NAME\]/g, this.input.author || '[AUTHOR NAME]')
+        .replace(/\[Copyright Holder\]/g, this.input.author || '[Copyright Holder]')
         .replace(/\[AUTHOR\]/g, this.input.author || '[AUTHOR]')
+        .replace(/\[NAME\]/g, this.input.author || '[NAME]')
         .replace(/\[PROJECT\]/g, this.input.project ? `Project: ${this.input.project}` : '');
       this.licenseText = license.trim();
     },

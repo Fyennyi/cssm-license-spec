@@ -101,7 +101,7 @@
       </div>
 
       <div class="mt-8 text-center">
-        <p class="text-xs text-slate-600">CSSM Unlimited License &copy; {{ input.year }}</p>
+        <p class="text-xs text-slate-600">Copyright &copy; {{ new Date().getFullYear() }} CSSM Group</p>
       </div>
     </div>
   </div>

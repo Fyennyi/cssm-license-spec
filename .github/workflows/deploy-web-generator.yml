@@ -9,7 +9,8 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  build:
+    name: Build web-generator
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -28,6 +29,26 @@ jobs:
 
       - name: Build static site
         run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: generator-dist
+          path: web-generator/dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: generator-dist
+          path: web-generator/dist
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

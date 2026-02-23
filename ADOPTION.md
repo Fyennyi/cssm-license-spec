@@ -6,4 +6,4 @@
 4. Mention CSSM Unlimited License in your `package.json` or `README`.
 5. For modifications, always distribute under CSSM Unlimited License v2.0.
 
-**Questions?** Open an [Issue](https://github.com/Fyennyi/cssm-license-spec/issues) or visit [cssmp.pp.ua](https://cssm.pp.ua).
+**Questions?** Open an [Issue](https://github.com/Fyennyi/cssm-license-spec/issues) or visit [cssm.pp.ua](https://cssm.pp.ua).

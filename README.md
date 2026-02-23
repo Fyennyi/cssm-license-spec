@@ -14,7 +14,7 @@ This repository contains the official texts, specification, adoption guidelines,
 - Choose the license version you want to apply.
 - Copy `LICENSE-2.0.txt` or `LICENSE-1.0.txt` to your project root as `LICENSE`.
 - Replace `[YEAR]` and `[AUTHOR NAME]` in the header.
-- Add a link to this repository or [cssmp.pp.ua](https://cssmp.pp.ua).
+- Add a link to this repository or [cssm.pp.ua](https://cssm.pp.ua).
 
 ## Documentation
 
@@ -27,4 +27,4 @@ This repository contains the official texts, specification, adoption guidelines,
 ## Links
 
 - GitHub CSSM Group: [Fyennyi](https://github.com/Fyennyi)
-- Website: [cssmp.pp.ua](https://cssmp.pp.ua)
+- Website: [cssm.pp.ua](https://cssm.pp.ua)

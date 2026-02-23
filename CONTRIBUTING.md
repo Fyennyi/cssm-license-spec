@@ -16,4 +16,4 @@ We welcome improvements, clarifications, and suggestions for the license texts a
 ## Contacts
 
 - GitHub Group: [Fyennyi](https://github.com/Fyennyi)
-- Website: [cssmp.pp.ua](https://cssmp.pp.ua)
+- Website: [cssm.pp.ua](https://cssm.pp.ua)

@@ -1,5 +1,7 @@
 # CSSM Unlimited License Specification
 
+![CSSM Unlimited License v2.0 Preview](./assets/license-preview.png)
+
 This repository contains the official texts, specification, adoption guidelines, and templates for the CSSM Unlimited License family.
 
 ## License Versions

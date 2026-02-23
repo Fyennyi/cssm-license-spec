@@ -45,7 +45,7 @@ provided in the documentation.
 1.3. (For game applications only) Use of this product may result in loss 
 of data, game worlds, creations, and other similar content.
 
-1.5. To preserve data, you need to create a backup copy; otherwise, the 
+1.4. To preserve data, you need to create a backup copy; otherwise, the 
 copyright holder is not responsible for any damage caused during use of 
 modifications (optional but recommended).
 

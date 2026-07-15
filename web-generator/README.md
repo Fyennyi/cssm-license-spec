@@ -2,6 +2,8 @@
 
 This is a simple web application to generate ready-to-use CSSM Unlimited License files.
 
+![Web Generator Preview](../assets/web-preview.png)
+
 ## Usage
 
 - Run locally:

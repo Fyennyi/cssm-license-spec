@@ -1,5 +1,7 @@
 # CSSM License Web Generator
 
+[![Deploy Generator to GitHub Pages](https://github.com/Fyennyi/cssm-license-spec/actions/workflows/deploy-web-generator.yml/badge.svg)](https://github.com/Fyennyi/cssm-license-spec/actions/workflows/deploy-web-generator.yml)
+
 This is a simple web application to generate ready-to-use CSSM Unlimited License files.
 
 ![Web Generator Preview](../assets/web-preview.png)

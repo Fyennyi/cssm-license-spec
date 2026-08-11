@@ -28,7 +28,7 @@ jobs:
         working-directory: web-generator
 
       - name: Upload build artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: web-generator/dist/.
 

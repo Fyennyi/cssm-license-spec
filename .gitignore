@@ -1,0 +1,14 @@
+# Dependencies
+/web-generator/node_modules
+
+# Production builds
+/web-generator/dist
+/web-generator/.vite
+
+# Environment variables & local configs
+/web-generator/.env
+/web-generator/.env.local
+
+# OS generated files
+.DS_Store
+Thumbs.db
